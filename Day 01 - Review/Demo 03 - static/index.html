@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extends keyword</title>
+</head>
+
+<body>
+    <script>
+        class Animal {
+            // non-static function, should be called by an object
+            say() {
+                console.log('not static');
+            }
+            // static function, can be called by a class
+            static hello() {
+                console.log('Hello, static');
+            }
+
+        }
+
+        // demo static 
+        let dog = new Animal(); // khoi tao doi tuong
+        dog.say(); // print "not static"
+        Animal.say(); // error not a function
+        Animal.hello(); // print "Hello, static"
+    </script>
+</body>
+
+</html>

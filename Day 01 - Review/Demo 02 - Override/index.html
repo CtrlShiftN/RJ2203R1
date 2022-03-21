@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extends keyword</title>
+</head>
+
+<body>
+    <script>
+        // class cha
+        class Animal {
+            say() {
+                console.log('Hi, I am an animal');
+            }
+            hello(name) {
+                console.log('Hi, ' + name);
+            }
+        }
+
+        // class con, ke thua
+        class Dog extends Animal {
+            // override method say
+            say() {
+                console.log('Hi, I am a dog');
+            }
+            hello(name) {
+                console.log('Hello, ' + name);
+            }
+        }
+
+        // demo extends 
+        let chihuahua = new Dog(); // khoi tao doi tuong
+        chihuahua.hello('Nam'); // override methods
+    </script>
+</body>
+
+</html>
