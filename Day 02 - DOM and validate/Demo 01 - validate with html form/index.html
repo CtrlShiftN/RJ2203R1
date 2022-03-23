@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validate with HTML form</title>
+</head>
+
+<body>
+    <form action="login.php">
+        <p>Username</p>
+        <input type="text" name="username" minlength="2" maxlength="12" required>
+        <p>Age</p>
+        <input type="number" name="age" min="5" max="100" required>
+        <p>Password</p>
+        <input type="password" name="password">
+        <p>Email</p>
+        <input type="email" name="email">
+        <p>Phone number</p>
+        <input type="text" name="phone" pattern="^[0][1-9]{9}$">
+        <br />
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>

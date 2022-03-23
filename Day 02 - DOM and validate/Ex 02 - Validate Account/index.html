@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validate Account</title>
+</head>
+<body>
+    <script>
+        function validateAccount(account) {
+            let accountRegrex = /^[_a-z0-9]{6,}$/;
+            return accountRegrex.test(account);
+        }
+        console.log('123abc_', validateAccount('123abc_'));
+        console.log('_abc123', validateAccount('_abc123'));
+        console.log('______', validateAccount('______'));
+        console.log('123456', validateAccount('123456'));
+        console.log('ab@gmail.', validateAccount('ab@gmail.'));
+        console.log('abcdefg', validateAccount('abcdefg'));
+        console.log('.@', validateAccount('.@'));
+        console.log('12345', validateAccount('12345'));
+        console.log('1234_', validateAccount('1234_'));
+        console.log('abcde', validateAccount('abcde'));
+    </script>
+</body>
+</html>
