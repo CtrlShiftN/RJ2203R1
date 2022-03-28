@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn demo for loop</title>
+</head>
+
+<body>
+    <script>
+        // mảng lưu trữ các thành viên với tổng quang đường chạy của mỗi thành viên
+        const team = [{
+                member: 'John',
+                km: 3
+            },
+            {
+                member: 'Jane',
+                km: 4
+            },
+            {
+                member: 'David',
+                km: 5
+            },
+            {
+                member: 'Peter',
+                km: 2
+            },
+        ];
+        // tính tổng số km chạy của cả team
+        let sum = 0;
+        for (let mem of team) {
+            sum += mem.km;
+        }
+        console.log("Team đó chạy được " + sum + " km")
+    </script>
+</body>
+
+</html>

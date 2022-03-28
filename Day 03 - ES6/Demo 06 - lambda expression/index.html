@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lambda expression</title>
+</head>
+
+<body>
+    <script>
+        // forEach
+        let fruit = ['Apple', "Orange"];
+        // fruit.forEach(function (currentVal, index) {
+        //     console.log(index + ": " + currentVal);
+        // })
+
+        let print = (currentVal, index) => {
+            console.log(index + ": " + currentVal);
+        }
+        fruit.forEach(print);
+
+        const kids = [{
+                "id": 1,
+                "name": "A",
+                "age": 5
+            },
+            {
+                "id": 2,
+                "name": "B",
+                "age": 6
+            },
+            {
+                "id": 3,
+                "name": "C",
+                "age": 7
+            },
+            {
+                "id": 4,
+                "name": "D",
+                "age": 8
+            },
+            {
+                "id": 5,
+                "name": "E",
+                "age": 9
+            }
+        ];
+        const kindergarn = [];
+        kids.forEach(kid => {       // loop từng phần tử của kids, currentValue lúc này được hiểu là kid
+            if (kid.age <= 6) {     // kiểm tra xem, kid nào <= 6 tuổi
+                kindergarn.push({   // đưa dữ liệu của các kid mà age <= 6 vào 1 mảng mới tên là kindergarn
+                    name: kid.name,
+                    age: kid.age
+                })
+            }
+            // console.log(kid);           // print each element
+        })
+        // console.log(kindergarn); // in ra mảng kindergarn
+    </script>
+</body>
+
+</html>

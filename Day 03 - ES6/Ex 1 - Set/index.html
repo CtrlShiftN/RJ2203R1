@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set</title>
+</head>
+
+<body>
+    <script>
+        const animals = [{
+                "ID": "DV8",
+                "Name": "Eurasian Collared-Dove",
+                "Type": "Dove"
+            },
+            {
+                "ID": "HK12",
+                "Name": "Bald Eagle",
+                "Type": "Hawk"
+            },
+            {
+                "ID": "HK6",
+                "Name": "Cooper's Hawk",
+                "Type": "Hawk"
+            },
+            {
+                "ID": "SP11",
+                "Name": "Bell's Sparrow",
+                "Type": "Sparrow"
+            },
+            {
+                "ID": "DV2",
+                "Name": "Mourning Dove",
+                "Type": "Dove"
+            },
+            {
+                "ID": "DV03",
+                "Name": "Chimp",
+                "Type": "Dove"
+            }
+        ];
+        let zoo = new Set(animals);
+        // khai bao doi tuong ve mot loai chim
+        let chimp = {
+            "ID": "DV03",
+            "Name": "Chimp",
+            "Type": "Dove"
+        }
+        console.log(zoo); // zoo sau khi moi khoi tao
+        // them vao zoo 1 doi tuong moi
+        let addAnimal = (animal) => {
+            zoo.add(animal);
+        }
+        // addAnimal(chimp);
+        // kiem tra xem mot doi tuong da co o trong zoo hay chua
+        let isExist = (animal) => {
+            let checkExist = false;
+            zoo.forEach(zo => {
+                if (zo.ID == animal.ID && zo.Name == animal.Name && zo.Type == animal.Type) {
+                    checkExist = true;
+                }
+                // cach 2: check nguyen ID
+            })
+            return checkExist;
+        }
+        console.log(isExist(chimp));
+        // xoa mot loai dong vat trong zoo theo ID
+        let deleteAnimalByID = (animalID) => {
+            zoo.forEach(zo => {
+                if (zo.ID == animalID) {
+                    zoo.delete(zo);
+                }
+            })
+        };
+        deleteAnimalByID("SP11");
+        // them neu chua co trong zoo
+        let addIfNotExist = (animal) => {
+            if (!isExist(animal)) { // kiem tra xem da co trong zoo hay chua
+                addAnimal(animal); // add them vao zoo
+            }
+        }
+        addIfNotExist(chimp);
+        console.log(zoo); // zoo sau khi da add
+    </script>
+</body>
+
+</html>

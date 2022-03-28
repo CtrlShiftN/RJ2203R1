@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow function</title>
+</head>
+
+<body>
+    <script>
+        let a = 2,
+            b = 4;
+        // one param vs 1 expression
+        let multi = number => number * 3;
+        console.log(multi(a));
+        // 2 params function(param1, param2)
+        let sum = (firstNumber, secondNumber) => firstNumber + secondNumber;
+        let sum2 = (firstNumber, secondNumber) => {
+            firstNumber *= 2;
+            return firstNumber + secondNumber;
+        }
+        console.log(sum2(a, b));
+        // one param with multi statements
+        let multipliedBy3 = number => {
+            let multi = 3;
+            return multi * number;
+        }
+        console.log(multipliedBy3(6));
+        // default value
+        let hello = (name, age = 1) => {
+            return "Hello " + name + " - " + age;
+        }
+        console.log(hello("Tim"));
+    </script>
+</body>
+
+</html>

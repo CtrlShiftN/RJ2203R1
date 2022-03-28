@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lambda Expression Demo</title>
+</head>
+
+<body>
+    <script>
+        let kids = [{
+                id: 1,
+                name: "a",
+                age: 3
+            },
+            {
+                id: 2,
+                name: "b",
+                age: 2
+            },
+            {
+                id: 3,
+                name: "c",
+                age: 7
+            },
+            {
+                id: 4,
+                name: "d",
+                age: 4
+            },
+            {
+                id: 5,
+                name: "e",
+                age: 8
+            }
+        ];
+        let kinder = kids.filter(kid => kid.age < 6).map(kid => ({
+            name: kid.name,
+            age: kid.age
+        }));
+        let elementary = kids.filter(kid => kid.age >= 6 && kid.age <= 11).map(kid => ({
+            name: kid.name,
+            age: kid.age
+        }));
+        console.log(kinder);
+        console.log(elementary);
+    </script>
+</body>
+
+</html>
