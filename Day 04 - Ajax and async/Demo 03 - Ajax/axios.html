@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Axios Demo</title>
+</head>
+
+<body>
+    <script>
+        let url = 'https://api.giphy.com/v1/gifs/search?q=foot&api_key=OaI8Scqh6gxKwYuB0TXRiZxeyTICIFcX';
+        axios.get(url)
+            .then((result) => {
+                console.log(result)
+            })
+            .catch(error => {
+                console.log(error)
+            })
+            // luon luon thuc thi
+            .then((result) => {
+                console.log(result)
+            })
+        // axios another get way
+        axios.get(url, {
+                params: {
+                    q: 'foot'
+                }
+            })
+            .then((result) => {
+                console.log(result)
+            })
+            .catch(error => {
+                console.log(error)
+            })
+        // axios post
+        axios.post(url, {
+                params: {
+                    q: 'foot'
+                }
+            })
+            .then((result) => {
+                console.log(result)
+            })
+            .catch(error => {
+                console.log(error)
+            });
+        // axios configurable
+        axios({
+            url: url,
+            method: 'GET',
+            data: {
+                q: 'foot',
+                api_key: 'OaI8Scqh6gxKwYuB0TXRiZxeyTICIFcX'
+            }
+        })
+    </script>
+</body>
+
+</html>
