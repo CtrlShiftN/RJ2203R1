@@ -8,6 +8,8 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Link href='/covid-api/home'>CovidHome</Link>
+      <br />
+      <Link href='/weather-api/'>Weather API</Link>
     </div>
   )
 }
