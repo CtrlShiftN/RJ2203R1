@@ -1,0 +1,21 @@
+{
+    "user": [{
+            "id": 1,
+            "name": "Bret",
+            "email": "sindresorhus@gmail.com",
+            "website": "sindresorhus.com"
+        },
+        {
+            "id": 2,
+            "name": "Kamren",
+            "email": "kamren@gmail.com",
+            "website": "kamren.com"
+        },
+        {
+            "id": 3,
+            "name": "Delphine",
+            "email": "delphine@gmail.com",
+            "website": "delphine.com"
+        }
+    ]
+}

@@ -1,8 +1,15 @@
 {
-  "student": [
-    {
-      "id": 2,
-      "name": "Smith"
-    }
-  ]
+    "contact": [{
+            "id": 1,
+            "name": "Peter",
+            "email": "Peter@gmail.com",
+            "tel": "0123456789"
+        },
+        {
+            "id": 2,
+            "name": "Pete",
+            "email": "Pet@gmail.com",
+            "tel": "0987654321"
+        }
+    ]
 }
